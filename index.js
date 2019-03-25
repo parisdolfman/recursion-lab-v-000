@@ -1,13 +1,13 @@
 // Code your solution here!
 
-function printString(string) {
-  console.log(string[0]);
-  if (string.length > 1) {
-    let subString =
-    string.substring(1, string.length);
-    printString(subString);
-  } else {return true;
-  }
+function printString(string) { // passes variable parameter
+  console.log(string[0]); // outputs 0 index of string
+  if (string.length > 1) { // as long as string length greater than 1 
+    let subString = // let second variable equal subString
+    string.substring(1, string.length); // subString method returns part of string between 1 and string.length 
+    printString(subString); //prints subStr created above
+  } else { return true; // base case
+ }
 }
 
 function reverseString(string) {
@@ -33,3 +33,5 @@ function isPalindrome(myString) {
 function addUpTo(array, index) {
   return index ? array[index] + addUpTo(array, --index) : array[index]
 }
+
+
