@@ -33,3 +33,11 @@ function isPalindrome(myString) {
 function addUpTo(array, index) {
   return index ? array[index] + addUpTo(array, --index) : array[index]
 }
+
+function maxOf(array) {
+  if (array.length === 1) {
+    return array[0];
+  } else {
+    return Mathmax(array.pop(), maxOf(array));
+  }
+}
